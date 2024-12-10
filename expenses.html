@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Tracker</title>
+  <link rel="stylesheet" href="expenses.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Expense Tracker</div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="expenses.html" class="active">Expenses</a></li>
+          <li><a href="budget.html">Budget</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1>Expenses</h1>
+        <button class="add-expense-btn" id="addExpenseBtn">Add Expense</button>
+      </header>
+
+      <section class="expense-list" id="expenseList">
+        <div class="expense-item">
+          <span class="expense-title">Groceries</span>
+          <span class="expense-amount">$200</span>
+          <button class="edit-btn" onclick="editExpense(this)">Edit</button>
+          <button class="delete-btn" onclick="deleteExpense(this)">Delete</button>
+        </div>
+      </section>
+
+      <!-- Modal for Adding/Editing Expense -->
+      <div class="modal" id="expenseModal">
+        <div class="modal-content">
+          <h2>Add Expense</h2>
+          <form id="expenseForm">
+            <input type="text" id="expenseTitle" placeholder="Title" required>
+            <input type="number" id="expenseAmount" placeholder="Amount" required>
+            <button type="submit" id="submitExpense">Save</button>
+            <button type="button" id="closeModal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="expenses.js"></script>
+</body>
+</html>

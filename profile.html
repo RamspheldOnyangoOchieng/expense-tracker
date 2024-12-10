@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Expense Tracker</div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+          <li><a href="expenses.html">Expenses</a></li>
+          <li><a href="budget.html">Budget</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1>User Profile</h1>
+      </header>
+
+      <section class="profile">
+        <div class="profile-header">
+          <div class="profile-image">
+            <img src="default-avatar.jpg" alt="Profile Picture" id="profile-pic" class="editable">
+            <input type="file" id="file-input" style="display:none;" onchange="previewImage()">
+            <button onclick="document.getElementById('file-input').click()">Change Profile Picture</button>
+          </div>
+          <button class="edit-btn" onclick="toggleEdit()">Edit Profile</button>
+        </div>
+
+        <form id="profile-form" class="profile-form">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" value="John Doe" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="johndoe@example.com" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" value="+1234567890" readonly>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" readonly>1234 Elm St, Springfield, IL</textarea>
+          </div>
+
+          <button type="button" class="save-btn" onclick="saveProfile()" style="display:none;">Save Changes</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>

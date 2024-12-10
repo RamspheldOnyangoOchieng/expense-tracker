@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Expense Tracker - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">Smart Expense</h2>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="expenses.html">Expenses</a></li>
+          <li><a href="budget.html">Budget</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header>
+        <h1>Dashboard</h1>
+        <div class="header-tools">
+          <input type="search" placeholder="Search..." >
+          <div class="user-info">
+            <span>Erastus</span>
+            <img src="user-avatar.png" alt="User Avatar">
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Overview -->
+      <section class="overview">
+        <div class="overview-card">
+          <h3>Remaining Budget</h3>
+          <p>$1,200</p>
+        </div>
+        <div class="overview-card">
+          <h3>Total Expenses</h3>
+          <p>$3,800</p>
+        </div>
+        <div class="overview-card">
+          <h3>Expense Analysis</h3>
+          <p>Monthly</p>
+        </div>
+      </section>
+
+      <!-- Expense Breakdown Chart -->
+      <section class="chart-section">
+        <h2>Expense Breakdown</h2>
+        <canvas id="expenseChart"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

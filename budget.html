@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budget Tracker</title>
+  <link rel="stylesheet" href="budget.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">Expense Tracker</div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="expenses.html">Expenses</a></li>
+          <li><a href="budget.html" class="active">Budget</a></li>
+          <li><a href="reports.html">Reports</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header>
+        <h1>Budget</h1>
+        <button class="set-budget-btn" id="setBudgetBtn">Set Budget</button>
+      </header>
+
+      <section class="budget-details" id="budgetDetails">
+        <div class="budget-status">
+          <span id="currentBudgetLabel">Current Budget: </span>
+          <span id="currentBudget">$0</span>
+        </div>
+
+        <div class="budget-progress">
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+          <div class="progress-text">
+            <span id="progressPercentage">0%</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal for setting Budget -->
+      <div class="modal" id="budgetModal">
+        <div class="modal-content">
+          <h2>Set Your Budget</h2>
+          <form id="budgetForm">
+            <input type="number" id="budgetAmount" placeholder="Enter Amount" required>
+            <button type="submit" id="submitBudget">Set Budget</button>
+            <button type="button" id="closeModal">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="budget.js"></script>
+</body>
+</html>
